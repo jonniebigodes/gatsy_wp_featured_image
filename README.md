@@ -3,3 +3,4 @@
 
 THis is a dummy repo for testing local/remote data fetch from wordpress including featured images in posts.
 
+endpoint for wordpress is `/blog`

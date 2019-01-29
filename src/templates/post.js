@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql,Link } from 'gatsby'
 import Img from 'gatsby-image'
 const BlogPost = ({ data }) => {
   const {wordpressPost}= data
@@ -17,6 +17,9 @@ const BlogPost = ({ data }) => {
         <br/>
         <div>
           <div dangerouslySetInnerHTML={{ __html: wordpressPost.content }} />
+        </div>
+        <div>
+          <Link to="/blog">Go back</Link>
         </div>
       </div>
     </div>
