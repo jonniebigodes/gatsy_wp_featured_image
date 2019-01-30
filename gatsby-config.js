@@ -1,4 +1,5 @@
 const dotenv= require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -15,9 +16,9 @@ module.exports = {
       },
     },
     {
-      resolve:`gatsby-source-wordpress`,
+      resolve:`@madetech/gatsby-source-wordpress`,
       options:{
-        baseUrl: `${process.env.WP_SITE}`,
+        baseUrl: process.env.WP_SITE,
         hostingWPCOM: true,
         protocol:`https`,
         useACF:false,
@@ -28,10 +29,11 @@ module.exports = {
           wpcom_pass:process.env.WP_PASSWORD
         },
         verboseOutput: false,
-        includedRoutes: [
-          "/*/*/posts",
-          "/*/*/media",
-        ],
+        // includedRoutes: [
+        //   "/*/*/posts",
+        //   "/*/*/media",
+          
+        // ],
       }
     },
     `gatsby-transformer-sharp`,
