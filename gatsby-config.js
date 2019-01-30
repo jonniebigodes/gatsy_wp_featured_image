@@ -15,8 +15,29 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    // {
+    //   resolve:`@madetech/gatsby-source-wordpress`,
+    //   options:{
+    //     baseUrl: process.env.WP_SITE,
+    //     hostingWPCOM: true,
+    //     protocol:`https`,
+    //     useACF:false,
+    //     auth:{
+    //       wpcom_app_clientSecret:process.env.WP_SECRET,
+    //       wpcom_app_clientId:process.env.WP_ID,
+    //       wpcom_user:process.env.WP_USERNAME,
+    //       wpcom_pass:process.env.WP_PASSWORD
+    //     },
+    //     verboseOutput: true,
+    //     // includedRoutes: [
+    //     //   "/*/*/posts",
+    //     //   "/*/*/media",
+          
+    //     // ],
+    //   }
+    // },
     {
-      resolve:`@madetech/gatsby-source-wordpress`,
+      resolve:`gatsby-source-wordpress`,
       options:{
         baseUrl: process.env.WP_SITE,
         hostingWPCOM: true,
